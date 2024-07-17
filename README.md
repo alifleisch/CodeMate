@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+CodeMate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description
 
-Currently, two official plugins are available:
+CodeMate is a “dating” social media app designed specifically for IT specialists. It aims to foster connections and collaborations among programmers by leveraging their skills and interests.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Key Features
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+	1.	Skill-Based Matchmaking:
+	•	Users create profiles detailing their programming skills, interests, and experience levels.
+	•	The app uses an algorithm to match users with complementary skills and interests, promoting balanced collaborations.
+	2.	Project Proposal Board:
+	•	A platform where users can pitch project ideas or browse through proposed projects.
+	•	Includes filters for project type, required skills, and commitment level.
+	3.	Direct Messaging Chat:
+	•	Facilitates communication between matched users.
+	•	Includes options for text (with plans for voice and video chat in the future), along with code sharing tools.
+	4.	Community and Forums:
+	•	A community forum for general discussion, advice, and sharing experiences.
+	•	Sub-forums for different programming languages, technologies, and other topics.
+	5.	Post Sharing Page:
+	•	A dedicated page where users can share posts similar to social media.
+	•	Users can give kudos, comment on posts, and share them to foster engagement and interaction.
