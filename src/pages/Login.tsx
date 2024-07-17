@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import '../styles/index.css';
 
 const Login = () => {
@@ -11,8 +12,21 @@ const Login = () => {
 
     return (
         <div className="container mt-4">
-            <h2 className="text-white">Login</h2>
-            <form className="login-form" onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
+            <motion.h2
+                className="text-white"
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+            >
+                Login
+            </motion.h2>
+            <motion.form
+                className="login-form"
+                onSubmit={(e) => { e.preventDefault(); handleLogin(); }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+            >
                 <div className="form-group mb-3">
                     <label className="label">Email:</label>
                     <input
@@ -34,7 +48,7 @@ const Login = () => {
                     />
                 </div>
                 <button type="submit" className="btn btn-primary submit-button">Login</button>
-            </form>
+            </motion.form>
         </div>
     );
 };

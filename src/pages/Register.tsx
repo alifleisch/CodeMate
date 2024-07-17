@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import '../styles/index.css';
 
 const Register = () => {
@@ -12,8 +13,21 @@ const Register = () => {
 
     return (
         <div className="container mt-4">
-            <h2 className="text-white">Register</h2>
-            <form className="register-form" onSubmit={(e) => { e.preventDefault(); handleRegister(); }}>
+            <motion.h2
+                className="text-white"
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+            >
+                Register
+            </motion.h2>
+            <motion.form
+                className="register-form"
+                onSubmit={(e) => { e.preventDefault(); handleRegister(); }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+            >
                 <div className="form-group mb-3">
                     <label className="label">Username:</label>
                     <input
@@ -45,7 +59,7 @@ const Register = () => {
                     />
                 </div>
                 <button type="submit" className="btn btn-primary submit-button">Register</button>
-            </form>
+            </motion.form>
         </div>
     );
 };

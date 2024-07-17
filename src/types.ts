@@ -4,3 +4,21 @@ export type Project = {
     description: string;
     owner: string;
 };
+
+export interface Post {
+    id: number;
+    content: string;
+    author: string;
+    owner: string;
+    timestamp: string;
+};
+
+export interface UserProfile {
+    id: number;
+    name: string;
+    age: number;
+    skills: string[];
+    level: string;
+    picture: string; // URL to the user's profile picture
+    bio?: string;
+};

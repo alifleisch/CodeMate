@@ -12,6 +12,7 @@ import Messaging from './pages/Messaging';
 import Navbar from './components/Navbar';
 import Skills from './pages/Skills';
 import Level from './pages/Level';
+import PostsFeed from './pages/PostsFeed';
 
 function App() {
   return (
@@ -19,10 +20,12 @@ function App() {
       <Navbar />
       <div className="bg-dark text-white min-vh-100">
         <Routes>
+          <Route path="/" element={<About />} />
           <Route path="/pages/home" element={<Home />} />
           <Route path="/pages/about" element={<About />} />
           <Route path="/pages/login" element={<Login />} />
           <Route path="/pages/register" element={<Register />} />
+          <Route path="/pages/postsfeed" element={<PostsFeed />} />
           <Route path="/pages/profile" element={<Profile />} />
           <Route path="/pages/projects" element={<Projects />} />
           <Route path="/pages/messaging" element={<Messaging />} />

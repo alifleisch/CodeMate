@@ -1,5 +1,31 @@
-const Profile = () => {
-    return <h2>Profile</h2>;
+import React from 'react';
+import { mockUser } from '../mock/mockUser';
+
+const Profile: React.FC = () => {
+    const user = mockUser;
+
+    return (
+        <div className="container mt-4">
+            <div className="card bg-dark text-white">
+                <div className="row g-0">
+                    <div className="col-md-4">
+                        <img src={user.picture} alt={user.name} className="img-fluid rounded-start" />
+                    </div>
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            <h5 className="card-title">{user.name}</h5>
+                            <p className="card-text"><strong>Age:</strong> {user.age}</p>
+                            <p className="card-text"><strong>Skills:</strong> {user.skills.join(', ')}</p>
+                            <p className="card-text"><strong>Level:</strong> {user.level}</p>
+                            <p className="card-text"><strong>Bio:</strong> {user.bio}</p>
+                            <p className="card-text"><strong>Email:</strong> {user.email}</p>
+                            <p className="card-text"><strong>Location:</strong> {user.location}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default Profile;

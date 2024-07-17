@@ -1,0 +1,36 @@
+.about-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.about-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.about-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.about-animation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
