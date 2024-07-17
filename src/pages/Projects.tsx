@@ -27,14 +27,14 @@ const Projects = () => {
 
     return (
         <div className="container mt-4">
-            <h2>Projects</h2>
+            <h2 className="text-white">Projects</h2>
             <button className="btn btn-primary mb-4" onClick={handleCreateProjectClick}>
                 {showCreateProject ? 'Cancel' : 'Create New Project'}
             </button>
             {showCreateProject && <CreateProject onAddProject={handleAddProject} />}
             <ul className="list-group">
                 {projects.map((project) => (
-                    <li key={project.id} className="list-group-item">
+                    <li key={project.id} className="list-group-item bg-dark text-white">
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
                         <p><strong>Owner:</strong> {project.owner}</p>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import socket from '../services/socket';
+import '../styles/index.css';
 
 const Messaging = () => {
     const [message, setMessage] = useState('');
@@ -24,19 +25,21 @@ const Messaging = () => {
     };
 
     return (
-        <div>
-            <h2>Messaging</h2>
-            <div>
+        <div className="container mt-4">
+            <h2 className="text-white">Messaging</h2>
+            <div className="form-group mb-3">
                 <input
                     type="text"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
+                    className="form-control bg-dark text-white"
+                    placeholder="Type your message"
                 />
-                <button onClick={sendMessage}>Send</button>
             </div>
-            <div>
+            <button onClick={sendMessage} className="btn btn-primary submit-button">Send</button>
+            <div className="mt-3">
                 {messages.map((msg, index) => (
-                    <p key={index}>{msg}</p>
+                    <p key={index} className="text-white">{msg}</p>
                 ))}
             </div>
         </div>

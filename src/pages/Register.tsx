@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/index.css';
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -10,25 +11,40 @@ const Register = () => {
     };
 
     return (
-        <div>
-            <h2>Register</h2>
-            <form onSubmit={(e) => { e.preventDefault(); handleRegister(); }}>
-                <label>
-                    Username:
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-                </label>
-                <br />
-                <label>
-                    Email:
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </label>
-                <br />
-                <label>
-                    Password:
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                </label>
-                <br />
-                <button type="submit">Register</button>
+        <div className="container mt-4">
+            <h2 className="text-white">Register</h2>
+            <form className="register-form" onSubmit={(e) => { e.preventDefault(); handleRegister(); }}>
+                <div className="form-group mb-3">
+                    <label className="label">Username:</label>
+                    <input
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        className="form-control bg-dark text-white"
+                        placeholder="Username"
+                    />
+                </div>
+                <div className="form-group mb-3">
+                    <label className="label">Email:</label>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="form-control bg-dark text-white"
+                        placeholder="example@domain.com"
+                    />
+                </div>
+                <div className="form-group mb-3">
+                    <label className="label">Password:</label>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="form-control bg-dark text-white"
+                        placeholder="Must have at least 6 characters"
+                    />
+                </div>
+                <button type="submit" className="btn btn-primary submit-button">Register</button>
             </form>
         </div>
     );

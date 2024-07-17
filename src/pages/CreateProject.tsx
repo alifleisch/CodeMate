@@ -33,11 +33,11 @@ const CreateProject: React.FC<CreateProjectProps> = ({ onAddProject }) => {
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Description</label>
-                    <textarea className="form-control" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
+                    <textarea className="form-control bg-dark text-white" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Owner</label>
-                    <input type="text" className="form-control" value={owner} onChange={(e) => setOwner(e.target.value)} />
+                    <input type="text" className="form-control bg-dark text-white" value={owner} onChange={(e) => setOwner(e.target.value)} />
                 </div>
                 <button type="submit" className="btn btn-success">Create Project</button>
             </form>
