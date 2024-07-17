@@ -4,7 +4,6 @@ import './styles/App.css';
 import './styles/custom-bootstrap.scss';
 import Home from './pages/Home';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
@@ -22,7 +21,6 @@ function App() {
         <Routes>
           <Route path="/pages/home" element={<Home />} />
           <Route path="/pages/about" element={<About />} />
-          <Route path="/pages/contact" element={<Contact />} />
           <Route path="/pages/login" element={<Login />} />
           <Route path="/pages/register" element={<Register />} />
           <Route path="/pages/profile" element={<Profile />} />
