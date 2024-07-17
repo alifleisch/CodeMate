@@ -66,7 +66,7 @@ export const fetchUserProfiles = async () => {
             age: 30,
             skills: ["Angular", "Node.js"],
             level: "Staff",
-            picture: "path/to/dimi.jpg",
+            picture: "public/54.jpg",
         },
         {
             id: 2,
@@ -74,7 +74,7 @@ export const fetchUserProfiles = async () => {
             age: 25,
             skills: ["React", "Java"],
             level: "Intermediate",
-            picture: "path/to/alice.jpg",
+            picture: "public/50.jpg",
         },
         {
             id: 3,
@@ -82,7 +82,7 @@ export const fetchUserProfiles = async () => {
             age: 18,
             skills: ["Python", "Django"],
             level: "Junior",
-            picture: "path/to/karl.jpg",
+            picture: "public/3.jpg",
         },
     ];
 };
