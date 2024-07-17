@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../styles/About.css';
 import RotatingTorusKnot from '../components/RotatingTorusKnot';
-import { DirectionalLightHelper } from 'three';
 
 const About: React.FC = () => {
     return (
