@@ -19,6 +19,6 @@ export interface UserProfile {
     age: number;
     skills: string[];
     level: string;
-    picture: string; // URL to the user's profile picture
+    picture: string;
     bio?: string;
 };

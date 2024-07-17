@@ -17,8 +17,6 @@ const RotatingCube: React.FC = () => {
             <boxGeometry args={[2, 2, 2]} />
             <meshStandardMaterial
                 color="#858aed"
-                metalness={0.5}
-                roughness={0.5}
             />
         </mesh>
     );

@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div className="bg-dark text-white min-vh-100">
+      <div className="container-fluid bg-dark text-white min-vh-100">
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/pages/home" element={<Home />} />

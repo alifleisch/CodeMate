@@ -13,18 +13,15 @@ const Register = () => {
 
     return (
         <div className="container mt-4">
-            <motion.h2
+            <h2
                 className="text-white"
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
             >
                 Register
-            </motion.h2>
+            </h2>
             <motion.form
                 className="register-form"
                 onSubmit={(e) => { e.preventDefault(); handleRegister(); }}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >

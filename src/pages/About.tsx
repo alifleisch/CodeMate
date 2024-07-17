@@ -3,7 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../styles/About.css';
-import RotatingCube from '../components/RotatingCube';
+import RotatingTorusKnot from '../components/RotatingTorusKnot';
+import { DirectionalLightHelper } from 'three';
 
 const About: React.FC = () => {
     return (
@@ -25,7 +26,7 @@ const About: React.FC = () => {
                 >
                     CodeMate is a social media app designed for IT specialists.
                     Our mission is to help you find collaborators and exciting projects
-                    to work on. Whether you're a experienced developer or just starting out,
+                    to work on. Whether you're an experienced developer or just starting out,
                     CodeMate has something for everyone.
                 </motion.p>
                 <motion.div
@@ -39,10 +40,16 @@ const About: React.FC = () => {
                 </motion.div>
             </div>
             <div className="about-animation">
-                <Canvas>
-                    <ambientLight />
-                    <pointLight position={[10, 10, 10]} />
-                    <RotatingCube />
+                <Canvas shadows>
+                    <ambientLight intensity={0.3} />
+                    <directionalLight
+                        position={[5, 10, 15]}
+                        intensity={1}
+                        castShadow
+                        shadow-mapSize-width={1024}
+                        shadow-mapSize-height={1024}
+                    />
+                    <RotatingTorusKnot />
                 </Canvas>
             </div>
         </div>
