@@ -1,5 +1,3 @@
-import { UserProfile } from "../types";
-
 export const mockUser = {
     id: 1,
     name: "Max Mustermann",

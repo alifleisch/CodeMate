@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { mockTopics } from '../mock/mockTopics';
-import { Topic, Post } from '../types';
+import { Post } from '../types';
 
 const TopicPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();

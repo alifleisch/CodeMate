@@ -23,7 +23,7 @@ export interface UserProfile {
     bio?: string;
     email?: string;
     location?: string;
-    projects: Project[];
+    projects?: Project[];
 };
 
 export interface Topic {
