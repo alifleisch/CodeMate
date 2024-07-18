@@ -49,7 +49,7 @@ const Skills: React.FC<SkillsProps> = ({ onSelectSkill }) => {
 
     return (
         <div className="container mt-4">
-            <h2>Skills</h2>
+            <h5>Skills</h5>
             <div className="mb-3">
                 <select
                     value={selectedSkill}

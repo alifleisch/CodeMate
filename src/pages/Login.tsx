@@ -22,8 +22,8 @@ const Login = () => {
             <motion.form
                 className="login-form"
                 onSubmit={(e) => { e.preventDefault(); handleLogin(); }}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
             >
                 <div className="form-group mb-3">
@@ -46,8 +46,17 @@ const Login = () => {
                         placeholder="Password"
                     />
                 </div>
-                <button type="submit" className="btn btn-primary submit-button">Login</button>
             </motion.form>
+            <motion.button
+                type="submit"
+                className="btn btn-primary submit-button"
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+            >
+                Login
+            </motion.button>
+
         </div>
     );
 };

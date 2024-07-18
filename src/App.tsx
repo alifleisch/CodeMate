@@ -1,16 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
 import './styles/App.scss';
-
-import Home from './pages/Home';
 import About from './pages/About';
+import Home from './pages/Home';
+import PostsFeed from './pages/PostsFeed';
+import Forum from './pages/Forum';
+import Messaging from './pages/Messaging';
+import Profile from './pages/profile/Profile';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Profile from './pages/profile/Profile';
-import Projects from './pages/Projects';
-import Messaging from './pages/Messaging';
 import Navbar from './components/Navbar';
-import PostsFeed from './pages/PostsFeed';
+import TopicPage from './pages/TopicPage';
 
 function App() {
   return (
@@ -25,7 +24,9 @@ function App() {
           <Route path="/pages/register" element={<Register />} />
           <Route path="/pages/postsfeed" element={<PostsFeed />} />
           <Route path="/pages/profile" element={<Profile />} />
-          <Route path="/pages/projects" element={<Projects />} />
+          <Route path="/pages/forum" element={<Forum />} />
+          <Route path="/pages/topicpage" element={<TopicPage />} />
+          <Route path="/pages/forum/:id" element={<TopicPage />} />
           <Route path="/pages/messaging" element={<Messaging />} />
         </Routes>
       </div>

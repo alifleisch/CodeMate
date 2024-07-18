@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { mockUser } from '../../mock/mockUser';
 import Skills from './Skills';
 import Level from './Level';
+import Projects from '../projectsPage/Projects';
+import { Project } from '../../types';
 
 const Profile: React.FC = () => {
     const [user, setUser] = useState(mockUser);
@@ -19,6 +21,13 @@ const Profile: React.FC = () => {
         setUser((prevUser) => ({
             ...prevUser,
             level: level,
+        }));
+    };
+
+    const handleAddProject = (newProject: Project) => {
+        setUser((prevUser) => ({
+            ...prevUser,
+            projects: [...prevUser.projects, newProject],
         }));
     };
 
@@ -44,6 +53,7 @@ const Profile: React.FC = () => {
             </div>
             <Skills onSelectSkill={handleAddSkill} />
             <Level onSelectLevel={handleSetLevel} />
+            <Projects initialProjects={user.projects} onAddProject={handleAddProject} />
         </div>
     );
 };

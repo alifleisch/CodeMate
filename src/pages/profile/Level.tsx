@@ -29,7 +29,7 @@ const Level: React.FC<LevelProps> = ({ onSelectLevel }) => {
 
     return (
         <div className="container mt-4">
-            <h2>Developer Level</h2>
+            <h5>Developer Level</h5>
             <div className="mb-3">
                 <select
                     value={selectedLevel}

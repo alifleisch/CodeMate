@@ -37,9 +37,9 @@ const PostsFeed: React.FC = () => {
             <motion.button
                 className="btn btn-primary mb-4"
                 onClick={() => setShowPostForm((prev) => !prev)}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
             >
                 {showPostForm ? 'Cancel' : 'Create New Post'}
             </motion.button>

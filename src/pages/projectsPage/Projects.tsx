@@ -1,41 +1,36 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { fetchProjects } from '../mock/mockApi';
-import { Project } from '../types';
+import { Project } from '../../types';
 import CreateProject from './CreateProject';
 
-const Projects = () => {
-    const [projects, setProjects] = useState<Project[]>([]);
+interface ProjectsProps {
+    initialProjects: Project[];
+    onAddProject: (newProject: Project) => void;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ initialProjects, onAddProject }) => {
+    const [projects, setProjects] = useState<Project[]>(initialProjects);
     const [showCreateProject, setShowCreateProject] = useState(false);
-
-    useEffect(() => {
-        const loadProjects = async () => {
-            const data = await fetchProjects();
-            setProjects(data);
-        };
-
-        loadProjects();
-    }, []);
 
     const handleCreateProjectClick = () => {
         setShowCreateProject((prev) => !prev);
     };
 
-    const handleAddProject = (newProject: { title: string; description: string; owner: string }) => {
-        const projectWithId = { ...newProject, id: Date.now() };
-        setProjects((prev) => [...prev, projectWithId]);
+    const handleAddProject = (newProject: Project) => {
+        setProjects((prev) => [...prev, newProject]);
+        onAddProject(newProject);
     };
 
     return (
         <div className="container mt-4">
-            <motion.h2
+            <motion.h5
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
                 className="text-white"
             >
-                Projects
-            </motion.h2>
+                My Projects
+            </motion.h5>
             <button className="btn btn-primary mb-4" onClick={handleCreateProjectClick}>
                 {showCreateProject ? 'Cancel' : 'Create New Project'}
             </button>

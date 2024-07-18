@@ -16,7 +16,7 @@ const Navbar = () => {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item"><Link className="nav-link" to="/pages/home">Home</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/pages/postsfeed">Feed</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/pages/projects">Projects</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/pages/forum">Forum</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/pages/messaging">Messages</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/pages/profile/">Profile</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/pages/login">Login</Link></li>

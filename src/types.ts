@@ -21,4 +21,14 @@ export interface UserProfile {
     level: string;
     picture: string;
     bio?: string;
+    email?: string;
+    location?: string;
+    projects: Project[];
+};
+
+export interface Topic {
+    id: number;
+    title: string;
+    description: string;
+    posts: Post[];
 };
