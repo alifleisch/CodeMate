@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import '../styles/index.css';
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -13,11 +12,14 @@ const Register = () => {
 
     return (
         <div className="container mt-4">
-            <h2
+            <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 className="text-white"
             >
                 Register
-            </h2>
+            </motion.h2>
             <motion.form
                 className="register-form"
                 onSubmit={(e) => { e.preventDefault(); handleRegister(); }}

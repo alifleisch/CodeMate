@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import socket from '../services/socket';
-import '../styles/index.css';
 
 const Messaging = () => {
     const [message, setMessage] = useState('');

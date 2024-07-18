@@ -1,6 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
 
-const Skills = () => {
+interface SkillsProps {
+    onSelectSkill: (skill: string) => void;
+}
+
+const Skills: React.FC<SkillsProps> = ({ onSelectSkill }) => {
     const skills = [
         'JavaScript', 'React', 'Angular', 'Vue.js', 'Node.js', 'Express', 'Next.js', 'Nest.js',
         'Java', 'Spring', 'Hibernate', 'JavaServer Faces (JSF)', 'Grails', 'Vaadin', 'Kotlin',
@@ -30,16 +34,37 @@ const Skills = () => {
         'Rapidminer', 'SAS Forecasting', 'Talend'
     ];
 
+    const [selectedSkill, setSelectedSkill] = useState<string>('');
+
+    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedSkill(event.target.value);
+    };
+
+    const handleAddSkill = () => {
+        if (selectedSkill) {
+            onSelectSkill(selectedSkill);
+            setSelectedSkill('');
+        }
+    };
+
     return (
         <div className="container mt-4">
             <h2>Skills</h2>
-            <ul className="list-group">
-                {skills.map((skill, index) => (
-                    <li key={index} className="list-group-item bg-dark text-light">
-                        {skill}
-                    </li>
-                ))}
-            </ul>
+            <div className="mb-3">
+                <select
+                    value={selectedSkill}
+                    onChange={handleSelectChange}
+                    className="form-select bg-dark text-light"
+                >
+                    <option value="" disabled>Select a skill</option>
+                    {skills.map((skill, index) => (
+                        <option key={index} value={skill}>{skill}</option>
+                    ))}
+                </select>
+            </div>
+            <button onClick={handleAddSkill} className="btn btn-primary">
+                Add Skill
+            </button>
         </div>
     );
 };

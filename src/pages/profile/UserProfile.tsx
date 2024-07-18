@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserProfile as UserProfileType } from '../types';
+import { UserProfile as UserProfileType } from '../../types';
 
 interface UserProfileProps {
     profile: UserProfileType;

@@ -1,8 +1,26 @@
-import React from 'react';
-import { mockUser } from '../mock/mockUser';
+import React, { useState } from 'react';
+import { mockUser } from '../../mock/mockUser';
+import Skills from './Skills';
+import Level from './Level';
 
 const Profile: React.FC = () => {
-    const user = mockUser;
+    const [user, setUser] = useState(mockUser);
+
+    const handleAddSkill = (skill: string) => {
+        if (!user.skills.includes(skill)) {
+            setUser((prevUser) => ({
+                ...prevUser,
+                skills: [...prevUser.skills, skill],
+            }));
+        }
+    };
+
+    const handleSetLevel = (level: string) => {
+        setUser((prevUser) => ({
+            ...prevUser,
+            level: level,
+        }));
+    };
 
     return (
         <div className="container mt-4">
@@ -24,6 +42,8 @@ const Profile: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <Skills onSelectSkill={handleAddSkill} />
+            <Level onSelectLevel={handleSetLevel} />
         </div>
     );
 };
