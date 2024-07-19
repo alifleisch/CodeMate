@@ -20,12 +20,9 @@ const Register = () => {
             >
                 Register
             </motion.h2>
-            <motion.form
+            <form
                 className="register-form"
                 onSubmit={(e) => { e.preventDefault(); handleRegister(); }}
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
             >
                 <div className="form-group mb-3">
                     <label className="label">Username:</label>
@@ -57,16 +54,13 @@ const Register = () => {
                         placeholder="Must have at least 6 characters"
                     />
                 </div>
-            </motion.form>
-            <motion.button
+            </form>
+            <button
                 type="submit"
                 className="btn btn-primary submit-button"
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
             >
                 Register
-            </motion.button>
+            </button>
         </div>
     );
 };

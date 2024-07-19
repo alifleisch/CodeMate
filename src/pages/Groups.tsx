@@ -12,22 +12,21 @@ const Forum: React.FC = () => {
                 transition={{ duration: 1 }}
                 className="text-white"
             >
-                Forum
+                Groups
             </motion.h2>
             <motion.p
-                initial={{ x: -100, opacity: 0 }}
+                initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.5 }}
                 className="about-description"
             >
-                Welcome to the forum. Here you can discuss various topics and share your thoughts.</motion.p>
+                Welcome to the groups. Here you can join different groups, discuss various topics and share your thoughts.</motion.p>
             <ul className="list-group">
                 {mockTopics.map(topic => (
                     <li key={topic.id} className="list-group-item bg-dark text-white">
                         <h5>{topic.title}</h5>
                         <p>{topic.description}</p>
-                        {/* <a href="pages/TopicPage.tsx"><button className="btn btn-primary">View Discussion</button></a> */}
-                        <Link to={`/forum/${topic.id}`} className="btn btn-primary">View Discussion</Link>
+                        <Link to={`/forum/${topic.id}`} className="btn btn-primary">View Group</Link>
                     </li>
                 ))}
             </ul>

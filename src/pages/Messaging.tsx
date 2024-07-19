@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import socket from '../services/socket';
+import { motion } from 'framer-motion';
 
 const Messaging = () => {
     const [message, setMessage] = useState('');
@@ -25,7 +26,14 @@ const Messaging = () => {
 
     return (
         <div className="container mt-4">
-            <h2 className="text-white">Messaging</h2>
+            <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="text-white"
+            >
+                Messaging
+            </motion.h2>
             <div className="form-group mb-3">
                 <input
                     type="text"

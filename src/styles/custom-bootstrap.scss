@@ -1,7 +1,7 @@
 @import 'bootstrap/scss/bootstrap';
 
 :root {
-    --bs-body-bg: #242424;
+    --bs-body-bg: #1e1e1e;
     --bs-body-font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
@@ -11,8 +11,28 @@
     --bs-btn-border-color: #7077ff;
     --bs-btn-hover-color: #000;
     --bs-btn-hover-bg: #8d93fd;
-    --bs-btn-hover-border-color: #7077ff;
+    --bs-btn-hover-border-color: #8d93fd;
     --bs-btn-active-color: #000;
     --bs-btn-active-bg: #8d93fd;
     --bs-btn-active-border-color: #7077ff;
+}
+
+.bg-dark {
+    background-color: rgb(29, 29, 29) !important;
+}
+
+.btn-success {
+    --bs-btn-bg: #000;
+    --bs-btn-border-color: #dbd9d9;
+    --bs-btn-hover-bg: #000;
+    --bs-btn-hover-border-color: #8d93fd;
+    --bs-btn-active-bg: #000;
+    --bs-btn-active-border-color: #7077ff;
+}
+
+.form-select:focus,
+.btn-success:hover {
+    border-color: #8688fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(29, 13, 253, 0.25);
 }

@@ -7,7 +7,7 @@ interface UserProfileProps {
     onNotMatch: (id: number) => void;
 }
 
-const UserProfile: React.FC<UserProfileProps> = ({ profile, onMatch, onNotMatch }) => {
+const UserProfile: React.FC<UserProfileProps> = ({ profile, onMatch: onFollow, onNotMatch: onMessage }) => {
     return (
         <div className="card bg-dark text-white">
             <img src={profile.picture} className="card-img-top" alt={profile.name} />
@@ -16,8 +16,8 @@ const UserProfile: React.FC<UserProfileProps> = ({ profile, onMatch, onNotMatch 
                 <p className="card-text"><strong>Age:</strong> {profile.age}</p>
                 <p className="card-text"><strong>Skills:</strong> {profile.skills.join(', ')}</p>
                 <p className="card-text"><strong>Level:</strong> {profile.level}</p>
-                <button onClick={() => onMatch(profile.id)} className="btn btn-success me-2">Match</button>
-                <button onClick={() => onNotMatch(profile.id)} className="btn btn-danger">Not Match</button>
+                <button onClick={() => onFollow(profile.id)} className="btn btn-success me-2">Follow</button>
+                <button onClick={() => onMessage(profile.id)} className="btn btn-success me-2">Message</button>
             </div>
         </div>
     );

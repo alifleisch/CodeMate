@@ -49,7 +49,7 @@ const TopicPage: React.FC = () => {
                 ))}
             </ul>
             <div className="mt-4">
-                <h5 className="text-white">Add a new post</h5>
+                <h5 className="text-white">Add a new comment</h5>
                 <div className="input-group">
                     <input
                         type="text"

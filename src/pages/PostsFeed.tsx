@@ -37,31 +37,22 @@ const PostsFeed: React.FC = () => {
             <motion.button
                 className="btn btn-primary mb-4"
                 onClick={() => setShowPostForm((prev) => !prev)}
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
             >
                 {showPostForm ? 'Cancel' : 'Create New Post'}
             </motion.button>
             {showPostForm && (
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
+                <div>
                     <PostForm onAddPost={handleAddPost} currentUser={mockUser.name} />
-                </motion.div>
+                </div>
             )}
             <div className="list-group">
                 {posts.map((post) => (
-                    <motion.div
-                        key={post.id}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
+                    <div key={post.id}>
                         <Post post={post} />
-                    </motion.div>
+                    </div>
                 ))}
             </div>
         </div>

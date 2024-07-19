@@ -9,7 +9,8 @@
     "build:prod": "tsc -b && vite build --base=/CodeMate/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "tree": "tree . --gitignore -I \"docs|public\""
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",

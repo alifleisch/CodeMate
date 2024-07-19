@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../styles/About.css';
 import RotatingTorusKnot from '../components/RotatingTorusKnot';
+import { Paths } from '../Paths';
 
 const About: React.FC = () => {
     return (
@@ -15,7 +16,7 @@ const About: React.FC = () => {
                     transition={{ duration: 1 }}
                     className="about-title"
                 >
-                    Welcome to CodeMate
+                    Welcome to <br /> &lt;CodeMate /&gt;
                 </motion.h1>
                 <motion.p
                     initial={{ x: -100, opacity: 0 }}
@@ -34,8 +35,8 @@ const About: React.FC = () => {
                     transition={{ duration: 1 }}
                     className="about-buttons"
                 >
-                    <Link to="/pages/register" className="btn btn-primary me-2">Register</Link>
-                    <Link to="/pages/login" className="btn btn-secondary">Login</Link>
+                    <Link to={Paths.Register} className="btn btn-primary me-2">Register</Link>
+                    <Link to={Paths.Login} className="btn btn-secondary">Login</Link>
                 </motion.div>
             </div>
             <div className="about-animation">
