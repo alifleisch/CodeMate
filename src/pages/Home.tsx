@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import UserProfile from './profile/UserProfile';
+import UserProfile from './profilePage/UserProfile';
 import { fetchUserProfiles } from '../mock/mockApi';
 import { UserProfile as UserProfileType } from '../types';
 import { motion } from 'framer-motion';
@@ -16,12 +16,12 @@ const Home = () => {
         loadProfiles();
     }, []);
 
-    const handleMatch = (id: number) => {
-        console.log(`Matched with user ${id}`);
+    const handleFollow = (id: number) => {
+        console.log(`Started following user ${id}`);
     };
 
-    const handleNotMatch = (id: number) => {
-        console.log(`Not matched with user ${id}`);
+    const handleMessage = (id: number) => {
+        console.log(`Opened conversation with user ${id}`);
     };
 
     return (
@@ -45,8 +45,8 @@ const Home = () => {
                     >
                         <UserProfile
                             profile={profile}
-                            onMatch={handleMatch}
-                            onNotMatch={handleNotMatch}
+                            onFollow={handleFollow}
+                            onMessage={handleMessage}
                         />
                     </motion.div>
                 ))}

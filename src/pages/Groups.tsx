@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { mockTopics } from '../mock/mockTopics';
+import { Paths } from "../Paths";
 
 const Forum: React.FC = () => {
     return (
@@ -26,7 +27,7 @@ const Forum: React.FC = () => {
                     <li key={topic.id} className="list-group-item bg-dark text-white">
                         <h5>{topic.title}</h5>
                         <p>{topic.description}</p>
-                        <Link to={`/forum/${topic.id}`} className="btn btn-primary">View Group</Link>
+                        <Link to={`${Paths.Groups}/${topic.id}`} className="btn btn-primary">View Group</Link>
                     </li>
                 ))}
             </ul>

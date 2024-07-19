@@ -30,9 +30,47 @@
     --bs-btn-active-border-color: #7077ff;
 }
 
+/* Home styles */
+
 .form-select:focus,
 .btn-success:hover {
     border-color: #8688fe;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(29, 13, 253, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(80, 29, 210, 0.25);
+}
+
+.user-card {
+    background-color: #38385d80 !important;
+    border-top: 1px solid #373543;
+    border-left: 1px solid #373543;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(192, 188, 253, 0.1);
+    overflow: hidden;
+}
+
+.user-card:hover {
+    border-color: #5d5eb2;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(80, 29, 210, 0.25);
+}
+
+.user-photo {
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 30px;
+    border-bottom: 1px solid #373543;
+}
+
+.form-control:focus {
+    border-color: #8688fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(80, 29, 210, 0.25);
+}
+
+.form-select:focus {
+    border-color: #8688fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(80, 29, 210, 0.25);
 }

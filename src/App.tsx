@@ -3,8 +3,8 @@ import './styles/App.scss';
 import About from './pages/About';
 import Home from './pages/Home';
 import PostsFeed from './pages/PostsFeed';
-import Messaging from './pages/Messaging';
-import Profile from './pages/profile/Profile';
+import Messaging from './pages/messagingPage/Messaging';
+import Profile from './pages/profilePage/Profile';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Navbar from './components/Navbar';
@@ -25,7 +25,7 @@ function App() {
           <Route path={Paths.Postsfeed} element={<PostsFeed />} />
           <Route path={Paths.Profile} element={<Profile />} />
           <Route path={Paths.Groups} element={<Groups />} />
-          <Route path="/forum/:id" element={<TopicPage />} />
+          <Route path={`${Paths.Groups}/:id`} element={<TopicPage />} />
           <Route path={Paths.Messaging} element={<Messaging />} />
         </Routes>
       </div>

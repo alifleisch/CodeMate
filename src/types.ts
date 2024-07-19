@@ -32,3 +32,13 @@ export interface Topic {
     description: string;
     posts: Post[];
 };
+
+export interface Conversation {
+    id: number;
+    user: {
+        id: number;
+        name: string;
+        picture: string;
+    };
+    lastMessage: string;
+}

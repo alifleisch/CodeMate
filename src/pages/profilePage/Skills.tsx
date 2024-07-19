@@ -21,7 +21,7 @@ const Skills: React.FC<SkillsProps> = ({ onSelectSkill }) => {
         'Bash', 'bc', 'Bourne shell', 'C shell', 'Clipper', 'Clojure', 'CoffeeScript',
         'Common Lisp', 'Crystal', 'cT', 'Elixir', 'Emacs Lisp', 'Erlang', 'Euphoria',
         'F#', 'Forth', 'Genie', 'Icon', 'IDL', 'Inform', 'Io', 'Korn shell',
-        'LabVIEW', 'Ladder Logic', 'LiveCode', 'Maple', 'Mercury', 'ML', 'MQL4',
+        'LabVIEW', 'Ladder Logic', 'LiveCode', 'Maple', 'Mercury', 'ML', 'AI', 'MQL4',
         'NATURAL', 'NXT-G', 'OpenCL', 'Oz', 'PL/I', 'PostScript', 'Q', 'Racket',
         'Red', 'Ring', 'RPG', 'S', 'SPARK', 'Stata', 'Vala', 'Verilog', 'VHDL',
         'PowerShell', 'Elm', 'Solidity', 'Jupyter Notebook', 'Wolfram Language',
