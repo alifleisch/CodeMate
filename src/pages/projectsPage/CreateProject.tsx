@@ -31,7 +31,7 @@ const CreateProject: React.FC<CreateProjectProps> = ({ onAddProject }) => {
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <h3>Create Project</h3>
+            <h5>Create Project</h5>
             <form onSubmit={(e) => { e.preventDefault(); handleCreateProject(); }}>
                 <div className="mb-3">
                     <label className="form-label">Title</label>

@@ -1,6 +1,7 @@
 @import 'bootstrap/scss/bootstrap';
 
 :root {
+    --bs-body-color: rgba(255, 255, 255, 0.9);
     --bs-body-bg: #1e1e1e;
     --bs-body-font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -40,7 +41,7 @@
 }
 
 .user-card {
-    background-color: #38385d80 !important;
+    background-color: #30303c80 !important;
     border-top: 1px solid #373543;
     border-left: 1px solid #373543;
     border-radius: 8px;
@@ -49,9 +50,9 @@
 }
 
 .user-card:hover {
-    border-color: #5d5eb2;
+    border-color: #444583;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(80, 29, 210, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(68, 25, 178, 0.25);
 }
 
 .user-photo {
@@ -64,12 +65,6 @@
 }
 
 .form-control:focus {
-    border-color: #8688fe;
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(80, 29, 210, 0.25);
-}
-
-.form-select:focus {
     border-color: #8688fe;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(80, 29, 210, 0.25);

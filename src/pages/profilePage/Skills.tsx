@@ -48,13 +48,12 @@ const Skills: React.FC<SkillsProps> = ({ onSelectSkill }) => {
     };
 
     return (
-        <div className="container mt-4">
-            <h5>Skills</h5>
+        <div className="container mt-1">
             <div className="mb-3">
                 <select
                     value={selectedSkill}
                     onChange={handleSelectChange}
-                    className="form-select bg-dark text-light"
+                    className="form-select bg-dark"
                 >
                     <option value="" disabled>Select a skill</option>
                     {skills.map((skill, index) => (

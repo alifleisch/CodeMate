@@ -35,16 +35,16 @@ const Projects: React.FC<ProjectsProps> = ({ initialProjects, onAddProject }) =>
                 {showCreateProject ? 'Cancel' : 'Create New Project'}
             </button>
             {showCreateProject && <CreateProject onAddProject={handleAddProject} />}
-            <ul className="list-group">
+            <ul className="projects-list list-group">
                 {projects.map((project) => (
                     <motion.li
                         key={project.id}
-                        className="list-group-item bg-dark text-white"
+                        className="projects-list-item list-group-item bg-dark text-white"
                         initial={{ opacity: 0, translateY: 20 }}
                         animate={{ opacity: 1, translateY: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h3>{project.title}</h3>
+                        <h5>{project.title}</h5>
                         <p>{project.description}</p>
                         <p><strong>Owner:</strong> {project.owner}</p>
                     </motion.li>

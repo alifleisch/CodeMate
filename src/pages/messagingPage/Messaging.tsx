@@ -47,7 +47,7 @@ const Messaging = () => {
     };
 
     return (
-        <div className="chat-container mt-4">
+        <div className="messaging-page chat-container mt-4">
             <div className="row">
                 <div className="col-md-4">
                     <ChatList

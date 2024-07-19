@@ -1,0 +1,59 @@
+.profile-page {
+    .profile-card {
+        width: 800px;
+        border-top: 1px solid #373543;
+        border-left: 1px solid #373543;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(192, 188, 253, 0.1);
+        overflow: hidden;
+    }
+
+    .btn-light {
+        background-color: #faf8f8;
+        color: #000;
+    }
+
+    .float-end {
+        float: right;
+    }
+
+    .btn-sm {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .img-profile {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+
+    .col-md-4 {
+        width: 25%;
+    }
+
+    .col-md-8 {
+        width: 575px;
+    }
+
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .form-control,
+    .form-select {
+        background-color: #1D1D1D;
+        border: 1px solid #373543;
+        margin-bottom: 1rem;
+    }
+
+    .form-select {
+        background-color: #222129;
+        border: 1px solid #373543;
+    }
+
+    .input-group {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 
 interface LevelProps {
     onSelectLevel: (level: string) => void;
+    selectedLevel: string;
 }
 
-const Level: React.FC<LevelProps> = ({ onSelectLevel }) => {
+const Level: React.FC<LevelProps> = ({ onSelectLevel, selectedLevel }) => {
     const levels = [
         'Intern', 'Trainee', 'Junior', 'Mid-level', 'Senior', 'Lead',
         'Staff', 'Principal', 'Architect', 'Director', 'VP of Engineering',
@@ -14,22 +14,12 @@ const Level: React.FC<LevelProps> = ({ onSelectLevel }) => {
         'Consultant'
     ];
 
-    const [selectedLevel, setSelectedLevel] = useState<string>('');
-
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setSelectedLevel(event.target.value);
-    };
-
-    const handleAddLevel = () => {
-        if (selectedLevel) {
-            onSelectLevel(selectedLevel);
-            setSelectedLevel('');
-        }
+        onSelectLevel(event.target.value);
     };
 
     return (
-        <div className="container mt-4">
-            <h5>Developer Level</h5>
+        <div className="container mt-1">
             <div className="mb-3">
                 <select
                     value={selectedLevel}
@@ -42,9 +32,6 @@ const Level: React.FC<LevelProps> = ({ onSelectLevel }) => {
                     ))}
                 </select>
             </div>
-            <button onClick={handleAddLevel} className="btn btn-primary">
-                Set Level
-            </button>
         </div>
     );
 };

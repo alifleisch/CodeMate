@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Navbar.css';
 import { Paths } from '../Paths';
 
