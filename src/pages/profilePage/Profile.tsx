@@ -47,7 +47,7 @@ const Profile: React.FC = () => {
 
     return (
         <div className="profile-page container mt-4">
-            <div className="profile-card bg-dark">
+            <div className="profile-card bg-dark text-white">
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src={user.picture} alt={user.name} className="img-profile" />
@@ -109,10 +109,15 @@ const Profile: React.FC = () => {
                                 <strong>Skills:</strong>
                                 {isEditing ? (
                                     <div className="input-group">
-                                        <Skills onSelectSkill={(skill) => setEditedUser((prevUser) => ({
-                                            ...prevUser,
-                                            skills: [...prevUser.skills, skill]
-                                        }))} />
+                                        <Skills
+                                            selectedSkills={editedUser.skills}
+                                            onSelectSkill={(skill) =>
+                                                setEditedUser((prevUser) => ({
+                                                    ...prevUser,
+                                                    skills: [...prevUser.skills, skill],
+                                                }))
+                                            }
+                                        />
                                     </div>
                                 ) : (
                                     ` ${user.skills.join(', ')}`

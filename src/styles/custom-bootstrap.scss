@@ -23,9 +23,9 @@
 }
 
 .btn-success {
-    --bs-btn-bg: #000;
+    --bs-btn-bg: rgb(20, 20, 20);
     --bs-btn-border-color: #dbd9d9;
-    --bs-btn-hover-bg: #000;
+    --bs-btn-hover-bg: #7077ff;
     --bs-btn-hover-border-color: #8d93fd;
     --bs-btn-active-bg: #000;
     --bs-btn-active-border-color: #7077ff;
@@ -41,18 +41,27 @@
 }
 
 .user-card {
-    background-color: #30303c80 !important;
+    background-color: #27262c90 !important;
     border-top: 1px solid #373543;
     border-left: 1px solid #373543;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(192, 188, 253, 0.1);
     overflow: hidden;
+    border-color: #2e2f59;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(45, 17, 118, 0.25);
 }
 
 .user-card:hover {
+    background-color: #322d65 !important;
     border-color: #444583;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(68, 25, 178, 0.25);
+}
+
+.card-text,
+.card-title {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .user-photo {

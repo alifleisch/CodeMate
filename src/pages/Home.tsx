@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import UserProfile from './profilePage/UserProfile';
 import { fetchUserProfiles } from '../mock/mockApi';
 import { UserProfile as UserProfileType } from '../types';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import UserProfile from './profilePage/UserProfile';
 
 const Home = () => {
     const [profiles, setProfiles] = useState<UserProfileType[]>([]);
@@ -43,11 +44,13 @@ const Home = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <UserProfile
-                            profile={profile}
-                            onFollow={handleFollow}
-                            onMessage={handleMessage}
-                        />
+                        <Link to={`/profile/${profile.id}`} style={{ textDecoration: 'none' }}>
+                            <UserProfile
+                                profile={profile}
+                                onFollow={handleFollow}
+                                onMessage={handleMessage}
+                            />
+                        </Link>
                     </motion.div>
                 ))}
             </div>

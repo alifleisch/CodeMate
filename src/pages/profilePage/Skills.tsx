@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 
 interface SkillsProps {
+    selectedSkills: string[];
     onSelectSkill: (skill: string) => void;
 }
 
-const Skills: React.FC<SkillsProps> = ({ onSelectSkill }) => {
+const Skills: React.FC<SkillsProps> = ({ selectedSkills, onSelectSkill }) => {
     const skills = [
-        'JavaScript', 'React', 'Angular', 'Vue.js', 'Node.js', 'Express', 'Next.js', 'Nest.js',
-        'Java', 'Spring', 'Hibernate', 'JavaServer Faces (JSF)', 'Grails', 'Vaadin', 'Kotlin',
+        'JavaScript', 'React', 'Angular', 'Vue.js', 'Node.js', 'Express', 'Next.js', 'Nest.js', 'React Native',
+        'Java', 'Spring', 'Hibernate', 'JavaServer Faces (JSF)', 'Grails', 'Vaadin',
+        'JDBC', 'JPA', 'Kotlin',
         'Python', 'Django', 'Flask', 'FastAPI', 'Pyramid', 'C', 'C++',
         'Ruby', 'Ruby on Rails', 'Sinatra', 'PHP', 'Laravel', 'Symfony', 'CodeIgniter',
-        'C#', 'ASP.NET', 'Entity Framework', 'Blazor', 'Go', 'Gin', 'Beego', 'Flutter',
-        'TensorFlow', 'Apache Spark', 'VB.NET', 'R', 'SQL',
+        'C#', 'ASP.NET', 'Entity Framework', 'Blazor', 'Go', 'Gin', 'Beego',
+        'TensorFlow', 'Apache Spark', 'VB.NET', 'R', 'SQL', 'PL/SQL',
         'Swift', 'Perl', 'Assembly language', 'MATLAB', 'Classic Visual Basic',
-        'Apache Groovy', 'Objective-C', 'Rust', 'SAS', 'Scratch', 'D', 'Dart', 'PL/SQL',
+        'Apache Groovy', 'Objective-C', 'Rust', 'SAS', 'Scratch', 'D', 'Dart', 'Flutter',
         'Logo', 'Delphi', 'COBOL', 'OpenEdge ABL', 'Julia', 'ABAP', 'Scala',
         'Transact-SQL', 'Scheme', 'Prolog', 'Ada', 'Lisp', 'Apex', 'Lua', 'Fortran',
         'Haskell', 'Hack', 'VBScript', 'Visual FoxPro', 'TypeScript', 'AWK',
@@ -41,7 +43,7 @@ const Skills: React.FC<SkillsProps> = ({ onSelectSkill }) => {
     };
 
     const handleAddSkill = () => {
-        if (selectedSkill) {
+        if (selectedSkill && !selectedSkills.includes(selectedSkill)) {
             onSelectSkill(selectedSkill);
             setSelectedSkill('');
         }
@@ -64,6 +66,17 @@ const Skills: React.FC<SkillsProps> = ({ onSelectSkill }) => {
             <button onClick={handleAddSkill} className="btn btn-primary">
                 Add Skill
             </button>
+            <div className="mt-3">
+                {selectedSkills.length > 0 && (
+                    <ul className="list-group">
+                        {selectedSkills.map((skill, index) => (
+                            <li key={index} className="list-group-item">
+                                {skill}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </div>
         </div>
     );
 };
