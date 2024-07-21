@@ -19,7 +19,7 @@ const RotatingTorusKnot: React.FC = () => {
                 <meshPhysicalMaterial
                     color="#a2a8ef"
                     roughness={0.4}
-                    metalness={0.2}
+                    metalness={0.3}
                     clearcoat={0.6}
                     clearcoatRoughness={0.5}
                 />

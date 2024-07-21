@@ -41,7 +41,7 @@ const About: React.FC = () => {
             </div>
             <div className="about-animation">
                 <Canvas shadows>
-                    <ambientLight intensity={0.3} />
+                    <ambientLight intensity={0.7} />
                     <directionalLight
                         position={[5, 10, 15]}
                         intensity={1}
