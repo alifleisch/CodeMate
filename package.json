@@ -1,52 +1,16 @@
 {
-  "name": "codemate",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "build:prod": "tsc -b && vite build --base=/CodeMate/",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "start": "node backend/server.js",
-    "tree": "tree . --gitignore -I \"docs|public\""
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.6.0",
-    "@popperjs/core": "^2.11.8",
-    "@react-three/drei": "^9.108.4",
-    "@react-three/fiber": "^8.16.8",
-    "axios": "^1.7.2",
-    "bootstrap": "^5.3.3",
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "framer-motion": "^11.3.6",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.25.1",
-    "sass": "^1.77.8",
-    "socket.io-client": "^4.7.5",
-    "three": "^0.166.1",
-    "ws": "^8.18.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@types/three": "^0.166.0",
-    "@typescript-eslint/eslint-plugin": "^7.15.0",
-    "@typescript-eslint/parser": "^7.15.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.4",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "typescript": "^5.2.2",
-    "vite": "^5.3.4"
-  },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "codemate-project",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {},
+    "main": "index.js",
+    "keywords": [],
+    "author": "Al Fleischmann",
+    "license": "ISC",
+    "workspaces": [
+        "backend",
+        "frontend"
+    ]
 }
