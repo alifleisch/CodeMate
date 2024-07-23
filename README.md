@@ -14,7 +14,7 @@ Key Features
 		•	Includes filters for project type, required skills, and commitment level.
 	3.	Direct Messaging Chat:
 		•	Facilitates communication between matched users.
-		•	Includes options for text (with plans for voice and video chat in the future), along with code sharing tools.
+		•	Includes options for text (with plans for voice and video chat in the future, along with code sharing tools).
 	4.	Community and Groups:
 		•	A groups page for general discussion, advice, and sharing experiences.
 		•	Groups for different programming languages, technologies, and other topics.
