@@ -1,11 +1,28 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { Paths } from '../Paths';
+import { postLogin } from '../mock/mockApi';
 
 const Login = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleLogin = async () => {
+        setIsLoading(true);
+        setError(null);
+        try {
+            const response = await postLogin(email, password);
+            console.log(response);
+            navigate(Paths.Home);
+        } catch (error: any) {
+            setError(error.message);
+        } finally {
+            setIsLoading(false);
+        }
         console.log('Logging in', { email, password });
     };
 
@@ -40,17 +57,18 @@ const Login = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="form-control bg-dark text-white"
-                        placeholder="Password"
+                        placeholder="Must have at least 6 characters"
                     />
                 </div>
+                <button
+                    type="submit"
+                    className="btn btn-primary submit-button"
+                    disabled={isLoading}
+                >
+                    {isLoading ? 'Logging in...' : 'Login'}
+                </button>
             </form>
-            <button
-                type="submit"
-                className="btn btn-primary submit-button"
-            >
-                Login
-            </button>
-
+            {error && <div className="error-message">{error}</div>}
         </div>
     );
 };

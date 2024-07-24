@@ -18,7 +18,7 @@ const Navbar = () => {
                         <li className="nav-item"><Link className="nav-link" to={Paths.Postsfeed}>Feed</Link></li>
                         <li className="nav-item"><Link className="nav-link" to={Paths.Groups}>Groups</Link></li>
                         <li className="nav-item"><Link className="nav-link" to={Paths.Messaging}>Messages</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to={Paths.Profile}>Profile</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to={Paths.Profile}>My Profile</Link></li>
                         <li className="nav-item"><Link className="nav-link" to={Paths.Login}>Login</Link></li>
                         <li className="nav-item"><Link className="nav-link" to={Paths.Register}>Register</Link></li>
                     </ul>

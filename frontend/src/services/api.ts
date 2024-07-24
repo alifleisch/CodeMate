@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { Conversation, Post, Project, Topic, UserProfile } from '../types';
-
-const API_URL = 'http://localhost:5176/api';
+import { API_URL } from '../config';
 
 export const fetchUsers = async () => {
     const response = await axios.get(`${API_URL}/users`);
@@ -16,19 +15,24 @@ export const fetchProjects = async (): Promise<Project> => {
 export const fetchPosts = async (): Promise<Post[]> => {
     const response = await axios.get(`${API_URL}/posts`);
     return response.data;
-}
+};
 
 export const fetchUserProfiles = async (): Promise<UserProfile[]> => {
     const response = await axios.get(`${API_URL}/userProfiles`);
     return response.data;
-}
+};
 
 export const fetchTopics = async (): Promise<Topic[]> => {
     const response = await axios.get(`${API_URL}/topics`);
     return response.data;
-}
+};
 
 export const fetchConversations = async (): Promise<Conversation[]> => {
     const response = await axios.get(`${API_URL}/conversations`);
+    return response.data;
+};
+
+export async function postLogin(email: string, password: string): Promise<unknown> {
+    const response = await axios.post(`${API_URL}/login`, { email, password });
     return response.data;
 }
