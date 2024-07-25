@@ -31,6 +31,10 @@
     --bs-btn-active-border-color: #7077ff;
 }
 
+::placeholder {
+    color: var(--placeholder-text-color) !important;
+}
+
 .error-message {
     color: rgb(220, 0, 0);
 }

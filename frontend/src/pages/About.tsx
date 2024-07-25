@@ -2,7 +2,7 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import '../styles/About.css';
+import '../styles/About.scss';
 import RotatingTorusKnot from '../components/RotatingTorusKnot';
 import { Paths } from '../Paths';
 

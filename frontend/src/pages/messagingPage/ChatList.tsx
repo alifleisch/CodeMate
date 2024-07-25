@@ -2,12 +2,12 @@ import React from 'react';
 import { Chat } from '../../types';
 
 interface ChatListProps {
-    conversations: Chat[];
+    chats: Chat[];
     onSelectConversation: (id: number) => void;
     selectedConversationId: number | null;
 }
 
-const ChatList: React.FC<ChatListProps> = ({ conversations, onSelectConversation, selectedConversationId }) => {
+const ChatList: React.FC<ChatListProps> = ({ chats: conversations, onSelectConversation, selectedConversationId }) => {
     return (
         <div className="chat-list">
             {conversations.map((conversation) => (

@@ -4,26 +4,29 @@ import { fetchConversations } from '../../services/mock/mockApi';
 import ChatList from './ChatList';
 import { Chat } from '../../types';
 import './Messaging.scss';
+import { ERROR_MESSAGES } from '../../constants/errorMessages';
 
 const Messaging = () => {
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState<string[]>([]);
-    const [conversations, setConversations] = useState<Chat[]>([]);
+    const [chats, setChats] = useState<Chat[]>([]);
     const [selectedConversationId, setSelectedConversationId] = useState<number | null>(null);
 
+    // loads conversations from the mockApi
     useEffect(() => {
         const loadConversations = async () => {
             try {
                 const convos = await fetchConversations();
-                setConversations(Object.values(convos));
+                setChats(Object.values(convos));
             } catch (error) {
-                console.error('Failed to fetch conversations:', error);
+                console.error(ERROR_MESSAGES.FETCH_CONVERSATIONS_ERROR, error);
             }
         };
 
         loadConversations();
     }, []);
 
+    // handles incoming messages
     useEffect(() => {
         socket.onmessage = (event) => {
             const msg = event.data;
@@ -46,7 +49,7 @@ const Messaging = () => {
 
     const handleSelectConversation = (id: number) => {
         setSelectedConversationId(id);
-        const conversation = conversations.find(conv => conv.id === id);
+        const conversation = chats.find(conv => conv.id === id);
         if (conversation) {
             setMessages(conversation.messages);
         }
@@ -57,7 +60,7 @@ const Messaging = () => {
             <div className="row">
                 <div className="col-md-4">
                     <ChatList
-                        conversations={conversations}
+                        chats={chats}
                         onSelectConversation={handleSelectConversation}
                         selectedConversationId={selectedConversationId}
                     />
