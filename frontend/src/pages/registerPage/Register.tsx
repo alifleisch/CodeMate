@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { handleRegister } from './handleRegister';
 
 const Register = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
 
-    const handleRegister = async () => {
-        console.log('Registering', { username, email, password });
+    const onSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        await handleRegister({ username, email, password }, { setError, setIsLoading });
     };
 
     return (
@@ -22,7 +26,7 @@ const Register = () => {
             </motion.h2>
             <form
                 className="register-form"
-                onSubmit={(e) => { e.preventDefault(); handleRegister(); }}
+                onSubmit={onSubmit}
             >
                 <div className="form-group mb-3">
                     <label className="label">Username:</label>
@@ -54,15 +58,18 @@ const Register = () => {
                         placeholder="Must have at least 6 characters"
                     />
                 </div>
+                {error && <div className="error-message mb-3">{error}</div>}
+                <button
+                    type="submit"
+                    className="btn btn-primary submit-button"
+                    disabled={isLoading}
+                >
+                    {isLoading ? 'Registering...' : 'Register'}
+                </button>
             </form>
-            <button
-                type="submit"
-                className="btn btn-primary submit-button"
-            >
-                Register
-            </button>
         </div>
     );
 };
 
 export default Register;
+

@@ -8,8 +8,8 @@ import TopicPage from './pages/TopicPage';
 import Messaging from './pages/messagingPage/Messaging';
 import Profile from './pages/profilePage/Profile';
 import UserProfileView from './pages/profilePage/UserProfileView';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Login from './pages/loginPage/Login';
+import Register from './pages/registerPage/Register';
 import Navbar from './components/Navbar';
 import { Paths } from './Paths';
 

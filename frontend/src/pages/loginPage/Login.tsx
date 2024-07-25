@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Paths } from '../Paths';
-import { postLogin } from '../services/mock/mockApi';
+import { handleLogin } from './handleLogin';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -11,19 +10,9 @@ const Login = () => {
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleLogin = async () => {
-        setIsLoading(true);
-        setError(null);
-        try {
-            const response = await postLogin(email, password);
-            console.log(response);
-            navigate(Paths.Home);
-        } catch (error: any) {
-            setError(error.message);
-        } finally {
-            setIsLoading(false);
-        }
-        console.log('Logging in', { email, password });
+    const onSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        await handleLogin({ email, password }, { setError, setIsLoading, navigate });
     };
 
     return (
@@ -38,7 +27,7 @@ const Login = () => {
             </motion.h2>
             <form
                 className="login-form"
-                onSubmit={(e) => { e.preventDefault(); handleLogin(); }}
+                onSubmit={onSubmit}
             >
                 <div className="form-group mb-3">
                     <label className="label">Email:</label>
@@ -60,6 +49,7 @@ const Login = () => {
                         placeholder="Must have at least 6 characters"
                     />
                 </div>
+                {error && <div className="error-message mb-3">{error}</div>}
                 <button
                     type="submit"
                     className="btn btn-primary submit-button"
@@ -68,7 +58,6 @@ const Login = () => {
                     {isLoading ? 'Logging in...' : 'Login'}
                 </button>
             </form>
-            {error && <div className="error-message mt-2">{error}</div>}
         </div>
     );
 };

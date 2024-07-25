@@ -3,6 +3,7 @@ import { Conversation, Post, Project, Topic, UserProfile } from '../../types';
 import { mockTopics } from './mockTopics';
 import { mockUser } from './mockUser';
 import { context } from './appContext';
+import { ERROR_MESSAGES } from '../../constants/errorMessages';
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -46,5 +47,5 @@ export async function postLogin(email: string, password: string): Promise<unknow
         return context.user;
     }
 
-    throw new Error("Wrong email or password");
+    throw new Error(ERROR_MESSAGES.WRONG_EMAIL_OR_PASSWORD);
 }
