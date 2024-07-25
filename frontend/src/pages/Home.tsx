@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchUserProfiles } from '../mock/mockApi';
+import { fetchUserProfiles } from '../services/mock/mockApi';
 import { UserProfile as UserProfileType } from '../types';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { mockTopics } from '../mock/mockTopics';
+import { mockTopics } from '../services/mock/mockTopics';
 import { Paths } from "../Paths";
 
 const Forum: React.FC = () => {

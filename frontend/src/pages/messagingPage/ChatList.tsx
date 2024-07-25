@@ -1,6 +1,6 @@
 import React from 'react';
 import { Conversation } from '../../types';
-import mockConversations from '../../mock/mockConversations';
+import mockConversations from '../../services/mock/mockConversations';
 
 interface ChatListProps {
     conversations: Conversation[];

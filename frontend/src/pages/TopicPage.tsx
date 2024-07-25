@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { mockTopics } from '../mock/mockTopics';
+import { mockTopics } from '../services/mock/mockTopics';
 import { Post } from '../types';
 
 const TopicPage: React.FC = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { mockUser } from '../../mock/mockUser';
+import { mockUser } from '../../services/mock/mockUser';
 import Skills from './Skills';
 import Level from './Level';
 import Projects from '../projectsPage/Projects';

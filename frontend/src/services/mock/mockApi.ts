@@ -1,7 +1,8 @@
 import { mockProjects, mockPosts, mockUserProfiles, mockConversations, mockUsers } from './mockData';
-import { Conversation, Post, Project, Topic, UserProfile } from '../types';
+import { Conversation, Post, Project, Topic, UserProfile } from '../../types';
 import { mockTopics } from './mockTopics';
 import { mockUser } from './mockUser';
+import { context } from './appContext';
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -35,13 +36,6 @@ export const fetchTopics = async (): Promise<Topic[]> => {
 export const fetchConversations = async (): Promise<Conversation[]> => {
     return mockConversations;
 };
-
-interface AppContext {
-    isLoggedIn?: boolean;
-    user?: typeof mockUser;
-};
-
-let context: AppContext = {};
 
 export async function postLogin(email: string, password: string): Promise<unknown> {
     await delay(400);

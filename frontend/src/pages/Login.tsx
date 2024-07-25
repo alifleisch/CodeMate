@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Paths } from '../Paths';
-import { postLogin } from '../mock/mockApi';
+import { postLogin } from '../services/mock/mockApi';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -68,7 +68,7 @@ const Login = () => {
                     {isLoading ? 'Logging in...' : 'Login'}
                 </button>
             </form>
-            {error && <div className="error-message">{error}</div>}
+            {error && <div className="error-message mt-2">{error}</div>}
         </div>
     );
 };

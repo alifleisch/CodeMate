@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import socket from '../../services/socket';
-import { fetchConversations } from '../../mock/mockApi';
+import { fetchConversations } from '../../services/mock/mockApi';
 import ChatList from './ChatList';
-import mockConversations from '../../mock/mockConversations';
+import mockConversations from '../../services/mock/mockConversations';
 import { Conversation } from '../../types';
 import './Messaging.scss';
 
