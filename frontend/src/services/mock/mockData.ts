@@ -1,3 +1,5 @@
+import { Chat } from "../../types";
+
 export const mockUsers = [
     { id: 1, username: 'user1', email: 'user1@example.com' },
     { id: 2, username: 'user2', email: 'user2@example.com' },
@@ -69,15 +71,15 @@ export const mockUserProfiles = [
         age: 30,
         skills: ["Angular", "Node.js"],
         level: "Staff",
-        picture: "public/54.jpg",
+        picture: "public/dimi.jpg",
     },
     {
         id: 2,
         name: "Alice",
         age: 25,
         skills: ["React", "Java"],
-        level: "Intermediate",
-        picture: "public/50.jpg",
+        level: "Middle",
+        picture: "public/alice.jpg",
     },
     {
         id: 3,
@@ -85,36 +87,42 @@ export const mockUserProfiles = [
         age: 18,
         skills: ["Python", "Django"],
         level: "Junior",
-        picture: "public/3.jpg",
+        picture: "public/karl.jpg",
     },
 ];
 
-export const mockConversations = [
-    {
+export const mockConversations: { [key: number]: Chat } = {
+    1: {
         id: 1,
-        user: {
-            id: 1,
-            name: "Dimi",
-            picture: "public/54.jpg",
-        },
-        lastMessage: "Message from Dimi: Awesome!",
+        user: { id: 1, name: 'Dimi', picture: 'public/dimi.jpg' },
+        messages: [
+            'Hey there!',
+            'You: Hello!',
+            'How\'s it going?',
+            'You: Great, thanks!',
+            'Awesome! What are you up for this week?'
+        ],
     },
-    {
+    2: {
         id: 2,
-        user: {
-            id: 2,
-            name: "Alice",
-            picture: "public/50.jpg",
-        },
-        lastMessage: "Great, talk to you later!",
+        user: { id: 2, name: 'Alice', picture: 'public/alice.jpg' },
+        messages: [
+            'Hi! What\'s up?',
+            'You: Not much, just working on some projects.',
+            'Cool! Let\'s catch up soon.',
+            'You: Definitely, looking forward to it!',
+            'Great, talk to you later!'
+        ],
     },
-    {
+    3: {
         id: 3,
-        user: {
-            id: 3,
-            name: "Karl",
-            picture: "public/3.jpg",
-        },
-        lastMessage: "I\'m doing well, just busy with studies.",
-    },
-];
+        user: { id: 3, name: 'Karl', picture: 'public/karl.jpg' },
+        messages: [
+            'Hello! How are you?',
+            'You: I\'m good, thanks for asking.',
+            'That\'s great to hear!',
+            'You: What about you?',
+            'I\'m doing well, just busy with studies.'
+        ],
+    }
+};

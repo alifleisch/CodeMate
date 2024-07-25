@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Conversation, Post, Project, Topic, UserProfile } from '../types';
+import { Chat, Post, Project, Topic, UserProfile } from '../types';
 import { API_URL } from '../config';
 
 export const fetchUsers = async () => {
@@ -27,7 +27,7 @@ export const fetchTopics = async (): Promise<Topic[]> => {
     return response.data;
 };
 
-export const fetchConversations = async (): Promise<Conversation[]> => {
+export const fetchConversations = async (): Promise<Chat[]> => {
     const response = await axios.get(`${API_URL}/conversations`);
     return response.data;
 };

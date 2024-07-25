@@ -1,5 +1,5 @@
-import { mockProjects, mockPosts, mockUserProfiles, mockConversations, mockUsers } from './mockData';
-import { Conversation, Post, Project, Topic, UserProfile } from '../../types';
+import { mockProjects, mockPosts, mockUserProfiles, mockUsers, mockConversations } from './mockData';
+import { Chat, Conversations, Post, Project, Topic, UserProfile } from '../../types';
 import { mockTopics } from './mockTopics';
 import { mockUser } from './mockUser';
 import { context } from './appContext';
@@ -34,7 +34,11 @@ export const fetchTopics = async (): Promise<Topic[]> => {
     return mockTopics;
 }
 
-export const fetchConversations = async (): Promise<Conversation[]> => {
+export const fetchChats = async (): Promise<Chat[]> => {
+    return Object.values(mockConversations);
+};
+
+export const fetchConversations = async (): Promise<Conversations> => {
     return mockConversations;
 };
 

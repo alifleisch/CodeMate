@@ -1,9 +1,8 @@
 import React from 'react';
-import { Conversation } from '../../types';
-import mockConversations from '../../services/mock/mockConversations';
+import { Chat } from '../../types';
 
 interface ChatListProps {
-    conversations: Conversation[];
+    conversations: Chat[];
     onSelectConversation: (id: number) => void;
     selectedConversationId: number | null;
 }
@@ -20,7 +19,7 @@ const ChatList: React.FC<ChatListProps> = ({ conversations, onSelectConversation
                     <img src={conversation.user.picture} alt={conversation.user.name} className="chat-item-img" />
                     <div className="chat-item-info">
                         <h5>{conversation.user.name}</h5>
-                        <p>{mockConversations[conversation.id][mockConversations[conversation.id].length - 1]}</p>
+                        <p>{conversation.messages[conversation.messages.length - 1]}</p>
                     </div>
                 </div>
             ))}

@@ -33,12 +33,18 @@ export interface Topic {
     posts: Post[];
 };
 
-export interface Conversation {
+export interface User {
     id: number;
-    user: {
-        id: number;
-        name: string;
-        picture: string;
-    };
-    lastMessage: string;
+    name: string;
+    picture: string;
+}
+
+export interface Chat {
+    id: number;
+    user: User;
+    messages: string[];
+}
+
+export interface Conversations {
+    [key: number]: Chat;
 }

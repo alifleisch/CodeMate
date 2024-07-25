@@ -2,20 +2,23 @@ import { useEffect, useState } from 'react';
 import socket from '../../services/socket';
 import { fetchConversations } from '../../services/mock/mockApi';
 import ChatList from './ChatList';
-import mockConversations from '../../services/mock/mockConversations';
-import { Conversation } from '../../types';
+import { Chat } from '../../types';
 import './Messaging.scss';
 
 const Messaging = () => {
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState<string[]>([]);
-    const [conversations, setConversations] = useState<Conversation[]>([]);
+    const [conversations, setConversations] = useState<Chat[]>([]);
     const [selectedConversationId, setSelectedConversationId] = useState<number | null>(null);
 
     useEffect(() => {
         const loadConversations = async () => {
-            const convos = await fetchConversations();
-            setConversations(convos);
+            try {
+                const convos = await fetchConversations();
+                setConversations(Object.values(convos));
+            } catch (error) {
+                console.error('Failed to fetch conversations:', error);
+            }
         };
 
         loadConversations();
@@ -43,7 +46,10 @@ const Messaging = () => {
 
     const handleSelectConversation = (id: number) => {
         setSelectedConversationId(id);
-        setMessages(mockConversations[id]);
+        const conversation = conversations.find(conv => conv.id === id);
+        if (conversation) {
+            setMessages(conversation.messages);
+        }
     };
 
     return (
