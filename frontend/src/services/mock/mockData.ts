@@ -72,7 +72,7 @@ export const mockUserProfiles = [
         age: 30,
         skills: ["Angular", "Node.js"],
         level: "Staff",
-        picture: "public/assets/Dimi.jpg",
+        picture: "public/Dimi.jpg",
     },
     {
         id: 2,
@@ -80,7 +80,7 @@ export const mockUserProfiles = [
         age: 25,
         skills: ["React", "Java"],
         level: "Middle",
-        picture: "public/assets/Alice.jpg",
+        picture: "public/Alice.jpg",
     },
     {
         id: 3,
@@ -88,14 +88,14 @@ export const mockUserProfiles = [
         age: 18,
         skills: ["Python", "Django"],
         level: "Junior",
-        picture: "public/assets/karl.jpg",
+        picture: "public/karl.jpg",
     },
 ];
 
 export const mockConversations: { [key: number]: Chat } = {
     1: {
         id: 1,
-        user: { id: 1, name: 'Dimi', picture: 'public/assets/Dimi.jpg' },
+        user: { id: 1, name: 'Dimi', picture: 'public/Dimi.jpg' },
         messages: [
             'Hey there!',
             'You: Hello!',
@@ -106,7 +106,7 @@ export const mockConversations: { [key: number]: Chat } = {
     },
     2: {
         id: 2,
-        user: { id: 2, name: 'Alice', picture: 'public/assets/Alice.jpg' },
+        user: { id: 2, name: 'Alice', picture: 'public/Alice.jpg' },
         messages: [
             'Hi! What\'s up?',
             'You: Not much, just working on some projects.',
@@ -117,7 +117,7 @@ export const mockConversations: { [key: number]: Chat } = {
     },
     3: {
         id: 3,
-        user: { id: 3, name: 'Karl', picture: 'public/assets/karl.jpg' },
+        user: { id: 3, name: 'Karl', picture: 'public/karl.jpg' },
         messages: [
             'Hello! How are you?',
             'You: I\'m good, thanks for asking.',

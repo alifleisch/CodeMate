@@ -1,6 +1,6 @@
 export enum Paths {
     Root = "/",
-    Home = "/home",
+    DiscoverUsers = "/discoverusers",
     Login = "/login",
     Register = "/register",
     Postsfeed = "/postsfeed",

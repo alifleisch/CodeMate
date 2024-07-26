@@ -2,6 +2,7 @@ import { Paths } from '../../Paths';
 import { NavigateFunction } from 'react-router-dom';
 import { postLogin } from '../../services/mock/mockApi';
 import { ERROR_MESSAGES } from '../../constants/errorMessages';
+import { mockUser } from '../../services/mock/mockUser';
 
 interface LoginFormData {
     email: string;
@@ -24,15 +25,17 @@ export async function handleLogin(formData: LoginFormData, context: LoginContext
     if (email.trim() === '' || password.length < 6) {
         setError(ERROR_MESSAGES.VALIDATION_ERROR);
         setIsLoading(false);
-        return;
+        return { success: false };
     }
 
     try {
         const response = await postLogin(email, password);
         console.log(response);
-        navigate(Paths.Home);
+        navigate(Paths.Postsfeed);
+        return { success: true, user: mockUser };
     } catch (error: any) {
         setError(error.message);
+        return { success: false };
     } finally {
         setIsLoading(false);
     }

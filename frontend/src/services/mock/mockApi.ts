@@ -2,8 +2,8 @@ import { mockProjects, mockPosts, mockUserProfiles, mockUsers, mockConversations
 import { Chat, Conversations, Post, Project, Topic, UserProfile } from '../../types';
 import { mockTopics } from './mockTopics';
 import { mockUser } from './mockUser';
-import { context } from './appContext';
 import { ERROR_MESSAGES } from '../../constants/errorMessages';
+import { context } from '../../context/AuthContext';
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 

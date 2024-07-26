@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/App.scss';
-import About from './pages/About';
-import Home from './pages/Home';
+import About from './pages/about/AboutPage';
+import DiscoverUsers from './pages/socialNetwork/DiscoverUsersPage';
 import Groups from './pages/groups/GroupsPge';
 import TopicPage from './pages/groups/TopicPage';
 import PostsFeed from './pages/feed/PostsFeed';
@@ -20,7 +20,7 @@ function App() {
       <div className="container-fluid bg-dark text-white min-vh-100">
         <Routes>
           <Route path={Paths.Root} element={<About />} />
-          <Route path={Paths.Home} element={<Home />} />
+          <Route path={Paths.DiscoverUsers} element={<DiscoverUsers />} />
           <Route path={Paths.Login} element={<Login />} />
           <Route path={Paths.Register} element={<Register />} />
           <Route path={Paths.Postsfeed} element={<PostsFeed />} />

@@ -4,10 +4,9 @@ import { UserProfile } from '../../types';
 interface UserProfileProps {
     profile: UserProfile;
     onFollow: (id: number) => void;
-    onMessage: (id: number) => void;
 }
 
-const UserProfileCard: React.FC<UserProfileProps> = ({ profile, onFollow, onMessage }) => {
+const UserProfileCard: React.FC<UserProfileProps> = ({ profile, onFollow }) => {
     return (
         <div className="card user-card bg-dark text-white">
             <img src={profile.picture} className="card-img-top user-photo" alt={profile.name} />
@@ -17,7 +16,6 @@ const UserProfileCard: React.FC<UserProfileProps> = ({ profile, onFollow, onMess
                 <p className="card-text"><strong>Level:</strong> {profile.level}</p>
                 <p className="card-text"><strong>Skills:</strong> {profile.skills.join(', ')}</p>
                 <button onClick={() => onFollow(profile.id)} className="btn btn-success me-2">Follow</button>
-                <button onClick={() => onMessage(profile.id)} className="btn btn-success">Message</button>
             </div>
         </div>
     );
