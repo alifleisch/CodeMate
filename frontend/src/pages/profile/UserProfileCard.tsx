@@ -1,13 +1,13 @@
 import React from 'react';
-import { UserProfile as UserProfileType } from '../../types';
+import { UserProfile } from '../../types';
 
 interface UserProfileProps {
-    profile: UserProfileType;
+    profile: UserProfile;
     onFollow: (id: number) => void;
     onMessage: (id: number) => void;
 }
 
-const UserProfile: React.FC<UserProfileProps> = ({ profile, onFollow, onMessage }) => {
+const UserProfileCard: React.FC<UserProfileProps> = ({ profile, onFollow, onMessage }) => {
     return (
         <div className="card user-card bg-dark text-white">
             <img src={profile.picture} className="card-img-top user-photo" alt={profile.name} />
@@ -23,4 +23,4 @@ const UserProfile: React.FC<UserProfileProps> = ({ profile, onFollow, onMessage 
     );
 };
 
-export default UserProfile;
+export default UserProfileCard;

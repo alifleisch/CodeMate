@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Project } from '../../types';
-import CreateProject from './CreateProject';
+import CreateProject from './CreateProjectForm';
+import { Project } from '../../../types';
 
 interface ProjectsProps {
     initialProjects: Project[];

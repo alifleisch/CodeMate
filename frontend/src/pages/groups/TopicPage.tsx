@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { mockTopics } from '../services/mock/mockTopics';
-import { Post } from '../types';
+import { mockTopics } from '../../services/mock/mockTopics';
+import { Post } from '../../types';
 
 const TopicPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -13,7 +13,7 @@ const TopicPage: React.FC = () => {
     const topicIndex = mockTopics.findIndex(t => t.id === parseInt(id, 10));
     const topic = mockTopics[topicIndex];
 
-    const [posts, setPosts] = useState<Post[]>(topic.posts);
+    const [posts, setPosts] = useState<Post[]>([...topic.posts]);
     const [newPostContent, setNewPostContent] = useState('');
 
     const handleAddPost = () => {
@@ -21,13 +21,13 @@ const TopicPage: React.FC = () => {
 
         const newPost: Post = {
             id: Date.now(),
-            author: 'Current User',
+            author: 'Max',
             content: newPostContent,
-            owner: 'Current User',
+            owner: 'Max',
             timestamp: new Date().toISOString(),
         };
 
-        mockTopics[topicIndex].posts.push(newPost);
+        topic.posts.push(newPost);
 
         setPosts([...posts, newPost]);
         setNewPostContent('');

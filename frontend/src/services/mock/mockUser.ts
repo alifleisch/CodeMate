@@ -4,7 +4,7 @@ export const mockUser = {
     age: 28,
     skills: ["React", "TypeScript", "Node.js"],
     level: "Senior",
-    picture: "public/max.jpg",
+    picture: "public/assets/max.jpg",
     bio: "Passionate developer with experience in full-stack development.",
     email: "max.muster@example.com",
     location: "Munich, Germany",

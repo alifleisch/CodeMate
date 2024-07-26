@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Post as PostType } from '../types';
+import { Post as PostType } from '../../types';
 import { motion } from 'framer-motion';
 
 interface PostFormProps {

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Post as PostType } from '../types';
+import { Post } from '../../types';
 
-const Post: React.FC<{ post: PostType }> = ({ post }) => {
+const PostItem: React.FC<{ post: Post }> = ({ post }) => {
     return (
         <div className="list-group-item bg-dark text-white">
             <h5 className="card-title">{post.owner}</h5>
@@ -11,4 +11,4 @@ const Post: React.FC<{ post: PostType }> = ({ post }) => {
     );
 };
 
-export default Post;
+export default PostItem;

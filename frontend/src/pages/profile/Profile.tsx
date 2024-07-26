@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { mockUser } from '../../services/mock/mockUser';
 import Skills from './Skills';
 import Level from './Level';
-import Projects from '../projectsPage/Projects';
 import { Project } from '../../types';
 import './Profile.scss';
+import Projects from './projectsComponent/ProjectsComponent';
 
 const Profile: React.FC = () => {
     const [user, setUser] = useState(mockUser);
@@ -76,7 +76,7 @@ const Profile: React.FC = () => {
                                     editedUser.name
                                 )}
                             </h5>
-                            <p className="card-text">
+                            <div className="card-text">
                                 <strong>Age:</strong>
                                 {isEditing ? (
                                     <div className="input-group d-flex justify-content-center">
@@ -91,8 +91,8 @@ const Profile: React.FC = () => {
                                 ) : (
                                     ` ${editedUser.age}`
                                 )}
-                            </p>
-                            <p className="card-text">
+                            </div>
+                            <div className="card-text">
                                 <strong>Level:</strong>
                                 {isEditing ? (
                                     <div className="input-group">
@@ -104,8 +104,8 @@ const Profile: React.FC = () => {
                                 ) : (
                                     ` ${user.level}`
                                 )}
-                            </p>
-                            <p className="card-text">
+                            </div>
+                            <div className="card-text">
                                 <strong>Skills:</strong>
                                 {isEditing ? (
                                     <div className="input-group">
@@ -122,8 +122,8 @@ const Profile: React.FC = () => {
                                 ) : (
                                     ` ${user.skills.join(', ')}`
                                 )}
-                            </p>
-                            <p className="card-text">
+                            </div>
+                            <div className="card-text">
                                 <strong>Bio:</strong>
                                 {isEditing ? (
                                     <div className="input-group d-flex justify-content-center">
@@ -138,8 +138,8 @@ const Profile: React.FC = () => {
                                 ) : (
                                     ` ${editedUser.bio}`
                                 )}
-                            </p>
-                            <p className="card-text">
+                            </div>
+                            <div className="card-text">
                                 <strong>Email:</strong>
                                 {isEditing ? (
                                     <div className="input-group">
@@ -154,8 +154,8 @@ const Profile: React.FC = () => {
                                 ) : (
                                     ` ${editedUser.email}`
                                 )}
-                            </p>
-                            <p className="card-text">
+                            </div>
+                            <div className="card-text">
                                 <strong>Location:</strong>
                                 {isEditing ? (
                                     <div className="input-group">
@@ -170,7 +170,7 @@ const Profile: React.FC = () => {
                                 ) : (
                                     ` ${editedUser.location}`
                                 )}
-                            </p>
+                            </div>
                             {isEditing && (
                                 <button
                                     onClick={handleSave}

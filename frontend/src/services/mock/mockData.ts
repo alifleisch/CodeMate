@@ -1,8 +1,9 @@
 import { Chat } from "../../types";
 
 export const mockUsers = [
-    { id: 1, username: 'user1', email: 'user1@example.com' },
-    { id: 2, username: 'user2', email: 'user2@example.com' },
+    { id: 1, username: 'Dimi', email: 'dimi@example.com' },
+    { id: 2, username: 'Alice', email: 'alice@example.com' },
+    { id: 3, username: 'Karl', email: 'karl@example.com' },
 ];
 
 export const mockProjects = [
@@ -10,19 +11,19 @@ export const mockProjects = [
         id: 1,
         title: 'Project One',
         description: 'Description for project one',
-        owner: 'user1',
+        owner: 'Dimi',
     },
     {
         id: 2,
         title: 'Project Two',
         description: 'Description for project two',
-        owner: 'user2',
+        owner: 'Alice',
     },
     {
         id: 3,
         title: 'Project Three',
         description: 'Description for project three',
-        owner: 'user3',
+        owner: 'Karl',
     },
 ];
 
@@ -30,36 +31,36 @@ export const mockPosts = [
     {
         id: 1,
         content: "Looking for collaborators on a React app.",
-        author: "User1",
-        owner: "User1",
+        author: "Dimi",
+        owner: "Dimi",
         timestamp: "2024-01-01"
     },
     {
         id: 2,
         content: "Looking for collaborators on a React app.",
-        author: "User2",
-        owner: "User1",
+        author: "Alice",
+        owner: "Alice",
         timestamp: "2024-01-02"
     },
     {
         id: 3,
         content: "Looking for collaborators on a React app.",
-        author: "User2",
-        owner: "User2",
+        author: "Alice",
+        owner: "Alice",
         timestamp: "2024-01-03"
     },
     {
         id: 4,
         content: "Looking for collaborators on a React app.",
-        author: "User1",
-        owner: "User1",
+        author: "Dimi",
+        owner: "Dimi",
         timestamp: "2024-01-04"
     },
     {
         id: 5,
         content: "Looking for collaborators on a React app.",
-        author: "User3",
-        owner: "User3",
+        author: "Karl",
+        owner: "Karl",
         timestamp: "2024-01-05"
     },
 ];
@@ -71,7 +72,7 @@ export const mockUserProfiles = [
         age: 30,
         skills: ["Angular", "Node.js"],
         level: "Staff",
-        picture: "public/dimi.jpg",
+        picture: "public/assets/Dimi.jpg",
     },
     {
         id: 2,
@@ -79,7 +80,7 @@ export const mockUserProfiles = [
         age: 25,
         skills: ["React", "Java"],
         level: "Middle",
-        picture: "public/alice.jpg",
+        picture: "public/assets/Alice.jpg",
     },
     {
         id: 3,
@@ -87,14 +88,14 @@ export const mockUserProfiles = [
         age: 18,
         skills: ["Python", "Django"],
         level: "Junior",
-        picture: "public/karl.jpg",
+        picture: "public/assets/karl.jpg",
     },
 ];
 
 export const mockConversations: { [key: number]: Chat } = {
     1: {
         id: 1,
-        user: { id: 1, name: 'Dimi', picture: 'public/dimi.jpg' },
+        user: { id: 1, name: 'Dimi', picture: 'public/assets/Dimi.jpg' },
         messages: [
             'Hey there!',
             'You: Hello!',
@@ -105,7 +106,7 @@ export const mockConversations: { [key: number]: Chat } = {
     },
     2: {
         id: 2,
-        user: { id: 2, name: 'Alice', picture: 'public/alice.jpg' },
+        user: { id: 2, name: 'Alice', picture: 'public/assets/Alice.jpg' },
         messages: [
             'Hi! What\'s up?',
             'You: Not much, just working on some projects.',
@@ -116,7 +117,7 @@ export const mockConversations: { [key: number]: Chat } = {
     },
     3: {
         id: 3,
-        user: { id: 3, name: 'Karl', picture: 'public/karl.jpg' },
+        user: { id: 3, name: 'Karl', picture: 'public/assets/karl.jpg' },
         messages: [
             'Hello! How are you?',
             'You: I\'m good, thanks for asking.',

@@ -2,16 +2,16 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/App.scss';
 import About from './pages/About';
 import Home from './pages/Home';
-import PostsFeed from './pages/PostsFeed';
-import Groups from './pages/Groups';
-import TopicPage from './pages/TopicPage';
-import Messaging from './pages/messagingPage/Messaging';
-import Profile from './pages/profilePage/Profile';
-import UserProfileView from './pages/profilePage/UserProfileView';
-import Login from './pages/loginPage/Login';
-import Register from './pages/registerPage/Register';
+import Groups from './pages/groups/GroupsPge';
+import TopicPage from './pages/groups/TopicPage';
+import PostsFeed from './pages/feed/PostsFeed';
+import Messaging from './pages/messenger/MessagingPage';
+import UserProfileView from './pages/profile/UserProfileView';
+import Login from './pages/login/LoginPage';
+import Register from './pages/register/RegisterPage';
 import Navbar from './components/Navbar';
 import { Paths } from './Paths';
+import Profile from './pages/profile/Profile';
 
 function App() {
   return (

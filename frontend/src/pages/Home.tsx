@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { fetchUserProfiles } from '../services/mock/mockApi';
-import { UserProfile as UserProfileType } from '../types';
+import { UserProfile } from '../types';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import UserProfile from './profilePage/UserProfile';
+import UserProfileCard from './profile/UserProfileCard';
 
 const Home = () => {
-    const [profiles, setProfiles] = useState<UserProfileType[]>([]);
+    const [profiles, setProfiles] = useState<UserProfile[]>([]);
 
     useEffect(() => {
         const loadProfiles = async () => {
@@ -45,7 +45,7 @@ const Home = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <Link to={`/profile/${profile.id}`} style={{ textDecoration: 'none' }}>
-                            <UserProfile
+                            <UserProfileCard
                                 profile={profile}
                                 onFollow={handleFollow}
                                 onMessage={handleMessage}
