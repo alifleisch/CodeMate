@@ -30,7 +30,7 @@ export interface Topic {
     id: number;
     title: string;
     description: string;
-    posts: Post[];
+    comments: Post[];
 };
 
 export interface User {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { mockTopics } from '../../services/mock/mockTopics';
 import { Paths } from "../../Paths";
 
-const Forum: React.FC = () => {
+const Groups: React.FC = () => {
     return (
         <div className="container mt-4">
             <motion.h2
@@ -35,4 +35,4 @@ const Forum: React.FC = () => {
     );
 };
 
-export default Forum;
+export default Groups;

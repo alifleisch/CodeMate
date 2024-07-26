@@ -14,8 +14,9 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item"><Link className="nav-link" to={Paths.DiscoverUsers}>Discover Users</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to={Paths.About}>About</Link></li>
                         <li className="nav-item"><Link className="nav-link" to={Paths.Postsfeed}>Feed</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to={Paths.DiscoverUsers}>Discover Users</Link></li>
                         <li className="nav-item"><Link className="nav-link" to={Paths.Groups}>Groups</Link></li>
                         <li className="nav-item"><Link className="nav-link" to={Paths.Messaging}>Messages</Link></li>
                         <li className="nav-item"><Link className="nav-link" to={Paths.Profile}>My Profile</Link></li>

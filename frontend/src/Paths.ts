@@ -1,5 +1,6 @@
 export enum Paths {
     Root = "/",
+    About = "/about",
     DiscoverUsers = "/discoverusers",
     Login = "/login",
     Register = "/register",
