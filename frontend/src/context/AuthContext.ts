@@ -1,4 +1,4 @@
-import { mockUser } from "../services/mock/mockUser";
+import { mockUser } from "@services/mock/mockUser";
 
 export interface AuthContext {
     isLoggedIn?: boolean;

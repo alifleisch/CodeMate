@@ -1,5 +1,5 @@
 import React from 'react';
-import { Post } from '../../types';
+import { Post } from '@/types';
 
 const PostItem: React.FC<{ post: Post }> = ({ post }) => {
     return (

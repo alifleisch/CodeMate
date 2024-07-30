@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchUserProfiles } from '../../services/mock/mockApi';
-import { UserProfile as UserProfileType } from '../../types';
+import { fetchUserProfiles } from '@services/mock/mockApi';
+import { UserProfile as UserProfileType } from '@/types';
 import './Profile.scss';
 
 const UserProfileView: React.FC = () => {

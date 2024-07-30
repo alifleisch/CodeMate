@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/App.scss';
-import About from './pages/about/AboutPage';
-import DiscoverUsers from './pages/socialNetwork/DiscoverUsersPage';
-import Groups from './pages/groups/GroupsPage';
-import TopicPage from './pages/groups/TopicPage';
-import PostsFeed from './pages/feed/PostsFeed';
-import Messaging from './pages/messenger/MessagingPage';
-import UserProfileView from './pages/profile/UserProfileView';
-import Login from './pages/login/LoginPage';
-import Register from './pages/register/RegisterPage';
-import Navbar from './components/Navbar';
+import About from '@pages/about/AboutPage';
+import DiscoverUsers from '@pages/socialNetwork/DiscoverUsersPage';
+import Groups from '@pages/groups/GroupsPage';
+import TopicPage from '@pages/groups/TopicPage';
+import PostsFeed from '@pages/feed/PostsFeed';
+import Messaging from '@pages/messenger/MessagingPage';
+import UserProfileView from '@pages/profile/UserProfileView';
+import Login from '@pages/login/LoginPage';
+import Register from '@pages/register/RegisterPage';
+import Navbar from '@components/Navbar';
 import { Paths } from './Paths';
-import Profile from './pages/profile/Profile';
+import Profile from '@pages/profile/Profile';
 
 function App() {
   return (
