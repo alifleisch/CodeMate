@@ -1,4 +1,4 @@
-import { Paths } from '../../Paths';
+import { Paths } from '@/Paths';
 import { NavigateFunction } from 'react-router-dom';
 import { postLogin } from '@services/mock/mockApi';
 import { ERROR_MESSAGES } from '@constants/errorMessages';

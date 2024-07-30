@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { mockTopics } from '@services/mock/mockTopics';
-import { Paths } from "../../Paths";
+import { mockTopics } from '@/services/mock/mockTopics';
+import { Paths } from "@/Paths";
 
 const Groups: React.FC = () => {
     return (

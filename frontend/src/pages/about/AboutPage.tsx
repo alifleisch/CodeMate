@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './About.scss';
-import { Paths } from '../../Paths';
+import { Paths } from '@/Paths';
 import RotatingTorusKnot from './RotatingTorusKnotComponent3JS';
 
 const About: React.FC = () => {
