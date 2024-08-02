@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Project } from '@/types';
+import { Project } from '@app/types';
 
 interface CreateProjectProps {
     onAddProject: (newProject: Project) => void;

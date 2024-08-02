@@ -1,8 +1,8 @@
-import { Paths } from '@/Paths';
+import { Paths } from '@app/Paths';
 import { NavigateFunction } from 'react-router-dom';
-import { postLogin } from '@services/mock/mockApi';
-import { ERROR_MESSAGES } from '@constants/errorMessages';
-import { mockUser } from '@services/mock/mockUser';
+import { postLogin } from '@app/services/mock/mockApi';
+import { ERROR_MESSAGES } from '@app/constants/errorMessages';
+import { mockUser } from '@app/services/mock/mockUser';
 
 interface LoginFormData {
     email: string;

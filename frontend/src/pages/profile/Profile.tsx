@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { mockUser } from '@services/mock/mockUser';
+import { mockUser } from '@app/services/mock/mockUser';
 import Skills from './Skills';
 import Level from './Level';
-import { Project } from '@/types';
+import { Project } from '@app/types';
 import './Profile.scss';
 import Projects from './projectsComponent/ProjectsComponent';
 
