@@ -1,6 +1,6 @@
 import React from 'react';
 import About from './about/AboutPage';
-import PostsFeed from '@pages/feed/PostsFeed';
+import PostsFeed from '@app/pages/feed/PostsFeed';
 
 const Home: React.FC = () => {
     const isLoggedIn = false;

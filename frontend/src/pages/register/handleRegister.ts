@@ -1,4 +1,4 @@
-import { ERROR_MESSAGES } from "@constants/errorMessages";
+import { ERROR_MESSAGES } from "@app/constants/errorMessages";
 
 interface RegisterFormData {
     username: string;

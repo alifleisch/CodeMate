@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import socket from '@services/socket';
-import { fetchConversations } from '@services/mock/mockApi';
+import socket from '@app/services/socket';
+import { fetchConversations } from '@app/services/mock/mockApi';
 import ChatList from './ChatList';
-import { Chat } from '@/types';
+import { Chat } from '@app/types';
 import './Messaging.scss';
-import { ERROR_MESSAGES } from '@constants/errorMessages';
+import { ERROR_MESSAGES } from '@app/constants/errorMessages';
 
 const Messaging = () => {
     const [message, setMessage] = useState('');

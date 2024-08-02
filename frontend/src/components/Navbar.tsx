@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.scss';
-import { Paths } from '@/Paths';
+import { Paths } from '@app/Paths';
 
 const Navbar = () => {
     return (

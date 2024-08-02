@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PostItem from './PostItem';
 import PostForm from './PostForm';
-import { Post as PostType } from '@/types';
-import { fetchPosts } from '@services/mock/mockApi';
-import { mockUser } from '@services/mock/mockUser';
+import { Post as PostType } from '@app/types';
+import { fetchPosts } from '@app/services/mock/mockApi';
+import { mockUser } from '@app/services/mock/mockUser';
 import { motion } from 'framer-motion';
 
 const PostsFeed: React.FC = () => {

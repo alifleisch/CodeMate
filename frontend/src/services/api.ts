@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Chat, Post, Project, Topic, UserProfile } from '../types';
-import { API_URL } from '@constants/url';
+import { API_URL } from '@app/constants/url';
 
 export const fetchUsers = async () => {
     const response = await axios.get(`${API_URL}/users`);

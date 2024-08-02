@@ -19,22 +19,7 @@
     "moduleDetection": "force",
     "baseUrl": "./src",
     "paths": {
-      "@components/*": [
-        "components/*"
-      ],
-      "@constants/*": [
-        "constants/*"
-      ],
-      "@context/*": [
-        "context/*"
-      ],
-      "@pages/*": [
-        "pages/*"
-      ],
-      "@services/*": [
-        "services/*"
-      ],
-      "@/*": [
+      "@app/*": [
         "*"
       ]
     },
