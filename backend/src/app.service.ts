@@ -21,7 +21,7 @@ export class AppService {
   createTrip(trip: any) {
     const newId = this.dummyTrips.length > 0 ? Math.max(...this.dummyTrips.map(t => t.id)) + 1 : 1;
     const newTrip = { id: newId, ...trip };
-    this.dummyTrips.push(newTrip);
+    this.dummyTrips.unshift(newTrip);
     return newTrip;
   }
 }
